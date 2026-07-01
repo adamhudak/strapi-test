@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sekcie_tim_clen",
+  "info": {
+    "displayName": "Člen tímu",
+    "description": "Jeden člen tímu — meno a pozícia."
+  },
+  "options": {},
+  "attributes": {
+    "meno": {
+      "type": "string",
+      "required": true
+    },
+    "pozicia": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

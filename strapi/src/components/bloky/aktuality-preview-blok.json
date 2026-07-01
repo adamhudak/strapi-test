@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_bloky_aktuality_preview_blok",
+  "info": {
+    "displayName": "Aktuality preview blok",
+    "description": "Posledné novinky — automaticky načíta aktuálne záznamy"
+  },
+  "options": {},
+  "attributes": {
+    "nadpis": {
+      "type": "string"
+    },
+    "popis": {
+      "type": "text"
+    },
+    "pocetPoloziek": {
+      "type": "integer",
+      "default": 3
+    }
+  }
+}

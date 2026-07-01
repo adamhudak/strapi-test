@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dopyty",
+  "info": {
+    "singularName": "dopyt",
+    "pluralName": "dopyty",
+    "displayName": "Dopyt",
+    "description": "Dopyty z kontaktného formulára."
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "meno": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "telefon": {
+      "type": "string"
+    },
+    "typStavby": {
+      "type": "string"
+    },
+    "popis": {
+      "type": "text"
+    }
+  }
+}

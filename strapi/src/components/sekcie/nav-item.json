@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sekcie_nav_item",
+  "info": {
+    "displayName": "Nav item",
+    "description": "Jedna položka navigácie (label + href)"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

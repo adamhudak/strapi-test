@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_sekcie_galeria_fotka",
+  "info": { "displayName": "Galéria — fotka" },
+  "options": {},
+  "attributes": {
+    "obrazok": { "type": "media", "multiple": false, "allowedTypes": ["images"], "required": true },
+    "popis": { "type": "string" }
+  }
+}

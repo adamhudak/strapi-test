@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_bloky_hero_blok",
+  "info": {
+    "displayName": "Hero blok",
+    "description": "Hero sekcia s nadpisom a CTA"
+  },
+  "options": {},
+  "attributes": {
+    "nadpis": {
+      "type": "text",
+      "required": true
+    },
+    "podnadpis": {
+      "type": "text"
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "ctaUrl": {
+      "type": "string"
+    },
+    "ctaSekundarneText": {
+      "type": "string"
+    },
+    "ctaSekundarneUrl": {
+      "type": "string"
+    },
+    "obrazok": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

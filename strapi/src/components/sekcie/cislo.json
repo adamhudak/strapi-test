@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sekcie_cislo",
+  "info": {
+    "displayName": "Číslo",
+    "description": "Jedno štatistické číslo — label + hodnota."
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "hodnota": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

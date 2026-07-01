@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_bloky_cta_blok",
+  "info": {
+    "displayName": "CTA blok",
+    "description": "Call-to-action pruh"
+  },
+  "options": {},
+  "attributes": {
+    "nadpis": {
+      "type": "string",
+      "required": true
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "ctaUrl": {
+      "type": "string"
+    }
+  }
+}

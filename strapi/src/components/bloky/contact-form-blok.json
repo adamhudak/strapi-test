@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_bloky_contact_form_bloks",
+  "info": {
+    "displayName": "Kontaktný formulár",
+    "icon": "envelope"
+  },
+  "options": {},
+  "attributes": {
+    "nadpis": {
+      "type": "string"
+    },
+    "popis": {
+      "type": "text"
+    }
+  }
+}

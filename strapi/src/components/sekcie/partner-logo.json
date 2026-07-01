@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_sekcie_partner_logo",
+  "info": { "displayName": "Partner logo" },
+  "options": {},
+  "attributes": {
+    "nazov": { "type": "string", "required": true },
+    "logo": { "type": "media", "multiple": false, "allowedTypes": ["images"] }
+  }
+}

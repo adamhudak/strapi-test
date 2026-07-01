@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sekcie_milnik",
+  "info": {
+    "displayName": "Míľnik",
+    "description": "Jeden míľnik v histórii firmy."
+  },
+  "options": {},
+  "attributes": {
+    "rok": {
+      "type": "string",
+      "required": true
+    },
+    "nazov": {
+      "type": "string",
+      "required": true
+    },
+    "popis": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_bloky_benefits_grid_bloks",
+  "info": {
+    "displayName": "Benefits Grid",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "nadpis": {
+      "type": "string"
+    },
+    "popis": {
+      "type": "text"
+    },
+    "polozky": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sekcie.benefit-item"
+    }
+  }
+}

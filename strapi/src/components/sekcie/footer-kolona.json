@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sekcie_footer_kolona",
+  "info": {
+    "displayName": "Footer kolóna",
+    "description": "Stĺpec s odkazmi vo footeri"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sekcie.footer-link"
+    }
+  }
+}

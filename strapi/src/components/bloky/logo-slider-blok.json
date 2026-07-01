@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_bloky_logo_slider_blok",
+  "info": {
+    "displayName": "Logo slider blok",
+    "description": "Nekonečný slider s logami partnerov"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "partneri": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sekcie.partner-logo"
+    }
+  }
+}

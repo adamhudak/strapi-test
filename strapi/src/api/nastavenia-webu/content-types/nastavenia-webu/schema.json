@@ -1,0 +1,65 @@
+{
+  "kind": "singleType",
+  "collectionName": "nastavenia_webu",
+  "info": {
+    "singularName": "nastavenia-webu",
+    "pluralName": "nastavenia-webu-list",
+    "displayName": "Nastavenia webu",
+    "description": "Globálne nastavenia — logo, navigácia, footer."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logoText": {
+      "type": "string",
+      "required": true,
+      "default": "MURAVO"
+    },
+    "logoZvyraznenie": {
+      "type": "string",
+      "default": "VO"
+    },
+    "headerCtaText": {
+      "type": "string",
+      "default": "Cenník 2026"
+    },
+    "headerCtaUrl": {
+      "type": "string",
+      "default": "/kontakty"
+    },
+    "navigacia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sekcie.nav-item"
+    },
+    "footerFirma": {
+      "type": "string",
+      "default": "MURAVO s. r. o."
+    },
+    "footerAdresa": {
+      "type": "text"
+    },
+    "footerIco": {
+      "type": "string"
+    },
+    "footerIcDph": {
+      "type": "string"
+    },
+    "footerKolony": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sekcie.footer-kolona"
+    },
+    "footerCopyright": {
+      "type": "string",
+      "default": "© 2026 MURAVO s. r. o."
+    },
+    "homepage": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::stranka.stranka"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_bloky_faq_blok",
+  "info": {
+    "displayName": "FAQ blok",
+    "description": "Blok s FAQ akordeonom"
+  },
+  "options": {},
+  "attributes": {
+    "nadpis": {
+      "type": "string"
+    },
+    "polozky": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sekcie.faq-item"
+    }
+  }
+}

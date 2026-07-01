@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aktuality",
+  "info": {
+    "singularName": "aktualita",
+    "pluralName": "aktuality",
+    "displayName": "Aktualita",
+    "description": "Blogové články a novinky"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nadpis": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nadpis",
+      "required": true
+    },
+    "perex": {
+      "type": "text",
+      "required": true
+    },
+    "obsah": {
+      "type": "richtext"
+    },
+    "kategoria": {
+      "type": "enumeration",
+      "enum": ["cennik", "norma", "sortiment", "navod", "dokumenty", "novinka"],
+      "default": "novinka",
+      "required": true
+    },
+    "obrazok": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stranky",
+  "info": {
+    "singularName": "stranka",
+    "pluralName": "stranky",
+    "displayName": "Stránka",
+    "description": "Dynamické stránky skladané z blokov"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nadpis": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nadpis",
+      "required": true
+    },
+    "seoTitle": {
+      "type": "string"
+    },
+    "seoDescription": {
+      "type": "text"
+    },
+    "sekcie": {
+      "type": "dynamiczone",
+      "components": [
+        "bloky.hero-blok",
+        "bloky.logo-slider-blok",
+        "bloky.benefits-grid-blok",
+        "bloky.faq-blok",
+        "bloky.galeria-blok",
+        "bloky.aktuality-preview-blok",
+        "bloky.cta-blok",
+        "bloky.contact-form-blok"
+      ]
+    }
+  }
+}

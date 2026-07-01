@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-charcoal font-body antialiased;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply max-w-[1240px] mx-auto px-8;
+  }
+
+  .mono-eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.08em] text-steel;
+  }
+
+  .display-h1 {
+    @apply font-display font-extrabold tracking-tightest2 leading-[0.96];
+    font-size: clamp(40px, 5.6vw, 78px);
+  }
+
+  .display-h2 {
+    @apply font-display font-extrabold tracking-tightest2 leading-[1.02];
+    font-size: clamp(28px, 3.2vw, 42px);
+  }
+
+  /* signature crop-mark device, used on spec panels */
+  .crop {
+    @apply relative;
+  }
+  .crop::before,
+  .crop::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-color: theme("colors.orange");
+  }
+  .crop::before {
+    top: -1px;
+    left: -1px;
+    border-left: 2px solid;
+    border-top: 2px solid;
+  }
+  .crop::after {
+    bottom: -1px;
+    right: -1px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+  }
+
+  .btn-primary {
+    @apply inline-block bg-charcoal text-paper border border-charcoal px-[22px] py-3
+      font-bold text-[13px] uppercase tracking-[0.03em] transition-colors
+      hover:bg-orange hover:border-orange hover:text-white;
+  }
+
+  .btn-ghost {
+    @apply inline-block border border-charcoal px-5 py-[11px]
+      font-bold text-[13px] uppercase tracking-[0.03em];
+  }
+
+  .tag {
+    @apply font-mono text-[11px] uppercase tracking-[0.06em] border border-charcoal px-[11px] py-[5px];
+  }
+  .tag-orange {
+    @apply bg-orange border-orange text-white;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

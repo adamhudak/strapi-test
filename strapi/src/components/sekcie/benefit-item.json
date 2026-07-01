@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sekcie_benefit_items",
+  "info": {
+    "displayName": "Benefit item",
+    "description": "Jeden box v Benefits Grid"
+  },
+  "options": {},
+  "attributes": {
+    "nadpis": {
+      "type": "string",
+      "required": true
+    },
+    "popis": {
+      "type": "text"
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}

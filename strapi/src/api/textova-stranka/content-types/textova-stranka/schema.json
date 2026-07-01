@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "textove_stranky",
+  "info": {
+    "singularName": "textova-stranka",
+    "pluralName": "textove-stranky",
+    "displayName": "Textová stránka",
+    "description": "GDPR, VOP, cookies a ďalšie jednoduché textové stránky."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nadpis": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nadpis",
+      "required": true
+    },
+    "obsah": {
+      "type": "richtext",
+      "required": true
+    },
+    "seoTitle": {
+      "type": "string"
+    },
+    "seoDescription": {
+      "type": "text"
+    }
+  }
+}

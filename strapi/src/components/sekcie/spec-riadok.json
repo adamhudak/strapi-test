@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sekcie_spec_riadok",
+  "info": {
+    "displayName": "Spec riadok",
+    "description": "Jeden riadok technickej špecifikácie (kľúč + hodnota)"
+  },
+  "options": {},
+  "attributes": {
+    "kluc": {
+      "type": "string",
+      "required": true
+    },
+    "hodnota": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

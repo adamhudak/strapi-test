@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sekcie_footer_link",
+  "info": {
+    "displayName": "Footer link",
+    "description": "Jeden odkaz vo footer stĺpci"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

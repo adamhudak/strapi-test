@@ -1,0 +1,15 @@
+node_modules
+.next
+.env.local
+.env
+out
+*.log
+
+# Strapi
+strapi/.tmp
+strapi/.cache
+strapi/.strapi
+strapi/dist
+strapi/build
+strapi/public/uploads
+license.txt

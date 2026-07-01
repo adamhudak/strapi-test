@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_bloky_galeria_blok",
+  "info": {
+    "displayName": "Galéria blok",
+    "description": "Blok s galériou fotiek a lightboxom"
+  },
+  "options": {},
+  "attributes": {
+    "nadpis": {
+      "type": "string"
+    },
+    "fotky": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sekcie.galeria-fotka"
+    }
+  }
+}

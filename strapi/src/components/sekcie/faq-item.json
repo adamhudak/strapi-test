@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_sekcie_faq_item",
+  "info": { "displayName": "FAQ položka" },
+  "options": {},
+  "attributes": {
+    "otazka": { "type": "string", "required": true },
+    "odpoved": { "type": "text", "required": true }
+  }
+}
