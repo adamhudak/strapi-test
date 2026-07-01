@@ -13,3 +13,4 @@ strapi/dist
 strapi/build
 strapi/public/uploads
 license.txt
+tsconfig.tsbuildinfo
