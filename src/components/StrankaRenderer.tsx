@@ -13,10 +13,12 @@ async function AktualityPreviewBlok({ nadpis, popis, pocet, parentSlug }: { nadp
   return (
     <section className="py-24">
       <div className="wrap">
-        <div className="mb-11 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-          <h2 className="display-h2">{nadpis ?? "Aktuality"}</h2>
-          {popis && <p className="max-w-[380px] text-[15px] text-steel">{popis}</p>}
-        </div>
+        {(nadpis || popis) && (
+          <div className="mb-11 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+            {nadpis && <h2 className="display-h2">{nadpis}</h2>}
+            {popis && <p className="max-w-[380px] text-[15px] text-steel">{popis}</p>}
+          </div>
+        )}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {aktuality.map((a) => (
             <Link key={a.slug} href={`/${parentSlug}/${a.slug}`} className="group border border-line p-6 hover:border-charcoal">
@@ -69,9 +71,11 @@ export default async function StrankaRenderer({ sekcie, parentSlug = "" }: { sek
             if (!items.length) return null;
             return (
               <section key={blok.id} className="border-b border-line py-14 overflow-hidden">
-                <div className="wrap mb-6">
-                  <div className="mono-eyebrow">{blok.eyebrow ?? "Partneri"}</div>
-                </div>
+                {blok.eyebrow && (
+                  <div className="wrap mb-6">
+                    <div className="mono-eyebrow">{blok.eyebrow}</div>
+                  </div>
+                )}
                 <div
                   className="flex gap-0"
                   style={{ animation: "marquee 28s linear infinite" }}

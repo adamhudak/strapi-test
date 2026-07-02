@@ -11,8 +11,8 @@ export default function MobileMenu({
   ctaUrl,
 }: {
   nav: NavItem[];
-  ctaText: string;
-  ctaUrl: string;
+  ctaText?: string | null;
+  ctaUrl?: string | null;
 }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -57,11 +57,13 @@ export default function MobileMenu({
                 {item.label}
               </Link>
             ))}
-            <div className="pt-4 pb-2">
-              <Link href={ctaUrl} className="btn-primary block text-center" onClick={() => setOpen(false)}>
-                {ctaText}
-              </Link>
-            </div>
+            {ctaText && ctaUrl && (
+              <div className="pt-4 pb-2">
+                <Link href={ctaUrl} className="btn-primary block text-center" onClick={() => setOpen(false)}>
+                  {ctaText}
+                </Link>
+              </div>
+            )}
           </nav>
         </div>
       )}

@@ -2,21 +2,14 @@ import Link from "next/link";
 import MobileMenu from "@/components/MobileMenu";
 import type { NastaveniaWebu } from "@/lib/types";
 
-const FALLBACK_NAV = [
-  { href: "/o-nas", label: "O nás" },
-  { href: "/aktuality", label: "Aktuality" },
-  { href: "/materialy", label: "Materiály" },
-  { href: "/kontakty", label: "Kontakty" },
-];
-
 export default function Header({ settings }: { settings?: NastaveniaWebu | null }) {
-  const logoText = settings?.logoText ?? "MURAVO";
-  const logoZvyraznenie = settings?.logoZvyraznenie ?? "VO";
-  const nav = settings?.navigacia ?? FALLBACK_NAV;
-  const ctaText = settings?.headerCtaText ?? "Cenník 2026";
-  const ctaUrl = settings?.headerCtaUrl ?? "/kontakty";
+  const logoText = settings?.logoText;
+  const logoZvyraznenie = settings?.logoZvyraznenie;
+  const nav = settings?.navigacia ?? [];
+  const ctaText = settings?.headerCtaText;
+  const ctaUrl = settings?.headerCtaUrl;
 
-  const logoPrefix = logoZvyraznenie
+  const logoPrefix = logoText && logoZvyraznenie
     ? logoText.slice(0, logoText.lastIndexOf(logoZvyraznenie))
     : logoText;
 
@@ -38,9 +31,11 @@ export default function Header({ settings }: { settings?: NastaveniaWebu | null 
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link href={ctaUrl} className="btn-primary hidden md:inline-flex">
-            {ctaText}
-          </Link>
+          {ctaText && ctaUrl && (
+            <Link href={ctaUrl} className="btn-primary hidden md:inline-flex">
+              {ctaText}
+            </Link>
+          )}
           <MobileMenu nav={nav} ctaText={ctaText} ctaUrl={ctaUrl} />
         </div>
       </div>

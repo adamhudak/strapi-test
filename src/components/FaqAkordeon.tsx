@@ -10,7 +10,7 @@ interface FaqData {
 export default function FaqAkordeon({ data }: { data?: FaqData | null }) {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
-  const nadpis = data?.nadpis ?? "Časté otázky";
+  const nadpis = data?.nadpis;
   const polozky = data?.polozky ?? [];
 
   if (!polozky.length) return null;
@@ -18,9 +18,11 @@ export default function FaqAkordeon({ data }: { data?: FaqData | null }) {
   return (
     <section className="py-24">
       <div className="wrap">
-        <div className="mb-11">
-          <h2 className="display-h2">{nadpis}</h2>
-        </div>
+        {nadpis && (
+          <div className="mb-11">
+            <h2 className="display-h2">{nadpis}</h2>
+          </div>
+        )}
 
         <div className="border-t border-line">
           {polozky.map((p, i) => {

@@ -2,16 +2,16 @@ import Link from "next/link";
 import type { NastaveniaWebu } from "@/lib/types";
 
 export default function Footer({ settings }: { settings?: NastaveniaWebu | null }) {
-  const logoText = settings?.logoText ?? "MURAVO";
-  const logoZvyraznenie = settings?.logoZvyraznenie ?? "VO";
+  const logoText = settings?.logoText;
+  const logoZvyraznenie = settings?.logoZvyraznenie;
   const firma = settings?.footerFirma;
   const adresa = settings?.footerAdresa;
   const ico = settings?.footerIco;
   const icDph = settings?.footerIcDph;
   const kolony = settings?.footerKolony ?? [];
-  const copyright = settings?.footerCopyright ?? `© ${new Date().getFullYear()} MURAVO s. r. o.`;
+  const copyright = settings?.footerCopyright;
 
-  const logoPrefix = logoZvyraznenie
+  const logoPrefix = logoText && logoZvyraznenie
     ? logoText.slice(0, logoText.lastIndexOf(logoZvyraznenie))
     : logoText;
 
@@ -54,7 +54,7 @@ export default function Footer({ settings }: { settings?: NastaveniaWebu | null 
           ))}
         </div>
         <div className="flex justify-between pt-6 text-xs">
-          <span>{copyright}</span>
+          {copyright && <span>{copyright}</span>}
           <div className="flex gap-4">
             <Link href="/gdpr" className="hover:text-orange">GDPR</Link>
             <span>Cookies</span>

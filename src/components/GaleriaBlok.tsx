@@ -14,7 +14,7 @@ interface GaleriaData {
 export default function GaleriaBlok({ data }: { data?: GaleriaData | null }) {
   const [index, setIndex] = useState(-1);
 
-  const nadpis = data?.nadpis ?? "Galéria";
+  const nadpis = data?.nadpis;
   const fotky = data?.fotky ?? [];
 
   if (!fotky.length) return null;
@@ -31,9 +31,11 @@ export default function GaleriaBlok({ data }: { data?: GaleriaData | null }) {
   return (
     <section className="py-24">
       <div className="wrap">
-        <div className="mb-11">
-          <h2 className="display-h2">{nadpis}</h2>
-        </div>
+        {nadpis && (
+          <div className="mb-11">
+            <h2 className="display-h2">{nadpis}</h2>
+          </div>
+        )}
 
         <div className="grid grid-cols-2 gap-1 sm:grid-cols-3">
           {fotky.map((f, i) => (
