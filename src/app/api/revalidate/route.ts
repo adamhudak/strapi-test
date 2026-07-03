@@ -1,4 +1,4 @@
-import { revalidateTag } from "next/cache";
+import { revalidateTag, revalidatePath } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
 const SECRET = process.env.REVALIDATE_SECRET;
@@ -43,6 +43,11 @@ export async function POST(req: NextRequest) {
   if (model === "stranka" && entry?.slug) tags.push(`stranka:${entry.slug}`);
 
   tags.forEach(revalidateTag);
+
+  // Also bust the route cache itself: a brand new page (never rendered
+  // before) gets cached as notFound() the first time it's requested, and
+  // revalidateTag alone doesn't repaint that cached 404 shell.
+  revalidatePath("/", "layout");
 
   console.log(`[revalidate] model=${model} tags=${tags.join(", ")}`);
   return NextResponse.json({ revalidated: true, model, tags });
